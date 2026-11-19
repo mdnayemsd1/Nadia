@@ -1,0 +1,9 @@
+# Cloudflare Pages project configuration.
+# Static site in ./public, backend API in ./functions (deployed automatically with the site).
+name = "nadia-gadget-house"
+pages_build_output_dir = "public"
+compatibility_date = "2025-01-01"
+
+# Secrets are NOT stored here. Set them in:
+#   Cloudflare dashboard -> Workers & Pages -> your project -> Settings -> Variables and Secrets
+# (see docs/DEPLOYMENT.md). For local development copy .dev.vars.example to .dev.vars.

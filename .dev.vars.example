@@ -1,0 +1,7 @@
+# Local development only. Copy to `.dev.vars` (git-ignored) and fill in real values.
+# NEVER commit real values. In production set these in the Cloudflare dashboard instead.
+SUPABASE_URL=https://YOUR-PROJECT-REF.supabase.co
+SUPABASE_ANON_KEY=your-public-anon-or-publishable-key
+SUPABASE_SERVICE_ROLE_KEY=your-service-role-or-secret-key
+TELEGRAM_BOT_TOKEN=your-bot-token-from-BotFather
+TELEGRAM_CHAT_ID=your-numeric-chat-id

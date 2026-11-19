@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — Nadia Gadget House</title>
+<meta name="theme-color" content="#0b0c2a">
+<link rel="icon" href="/assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/css/store.css">
+<link rel="stylesheet" href="/assets/css/admin.css">
+</head>
+<body class="admin">
+<div class="bg" aria-hidden="true"></div>
+
+<header class="header">
+  <div class="wrap header-in">
+    <a class="btn btn-ghost btn-sm" href="/" id="back-store" data-i18n="a_back">Back to store</a>
+    <strong class="a-title" data-i18n="a_title">Admin Panel</strong>
+    <div class="actions">
+      <button class="chip" id="lang-btn" type="button">বাংলা</button>
+      <button class="btn btn-ghost btn-sm" id="logout-btn" type="button" hidden data-i18n="a_logout">Sign out</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap a-main">
+  <noscript>JavaScript is required.</noscript>
+
+  <!-- Login -->
+  <section id="login-view" class="login card-glass" hidden>
+    <h1 data-i18n="a_login">Sign in</h1>
+    <p class="muted" data-i18n="a_login_hint">Authorized administrators only.</p>
+    <form id="login-form" novalidate>
+      <div id="login-error" class="form-error" role="alert" hidden></div>
+      <div class="field"><label for="l-email" data-i18n="a_email">Email</label><input id="l-email" type="email" autocomplete="username" required></div>
+      <div class="field"><label for="l-pass" data-i18n="a_password">Password</label><input id="l-pass" type="password" autocomplete="current-password" required></div>
+      <button class="btn btn-primary" id="login-btn" type="submit" style="width:100%" data-i18n="a_login">Sign in</button>
+    </form>
+  </section>
+
+  <!-- App -->
+  <section id="app-view" hidden>
+    <nav class="tabs" id="tabs" aria-label="Admin sections">
+      <button type="button" data-tab="dashboard" data-i18n="a_dashboard">Dashboard</button>
+      <button type="button" data-tab="products" data-i18n="a_products">Products</button>
+      <button type="button" data-tab="categories" data-i18n="a_categories">Categories</button>
+      <button type="button" data-tab="orders" data-i18n="a_orders">Orders</button>
+      <button type="button" data-tab="settings" data-i18n="a_settings">Settings</button>
+    </nav>
+    <div id="view" aria-live="polite"></div>
+  </section>
+
+  <p id="boot-error" class="form-error" role="alert" hidden></p>
+  <p id="boot-loading" class="muted" data-i18n="loading">Loading…</p>
+</main>
+
+<dialog class="modal admin-modal" id="edit-dialog" aria-labelledby="edit-title">
+  <button class="icon-btn modal-x" type="button" data-close aria-label="Close">✕</button>
+  <div id="edit-body"></div>
+</dialog>
+
+<script type="module" src="/assets/js/admin.js"></script>
+</body>
+</html>
